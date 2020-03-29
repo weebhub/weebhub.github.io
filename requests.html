@@ -9,11 +9,15 @@
         <h1 style="text-align: center; color: white;">Weeb<span style="background-color: #fb9819; color: black; border: solid #fb9819 1px; border-radius: 4px;">hub</span></h1>
 
         <script>
+            var d;
+
+            $.getJSON("/file.json", function(data){
+                    d = data;
+            });
 
             $("submitBtn").submit(function() {
-                $.getJSON("/file.json", function(data){
-                    console.log(data);
-                });
+                console.log("Working");
+                console.log(data)
             });
         </script>
 

@@ -10,11 +10,9 @@
 
         <script>
             $.getJSON("/file.json", function(data){
-                console.log(data);
-
-                // $("submitBtn").submit(function() {
-
-                // });
+                $("submitBtn").submit(function() {
+                    console.log(data);
+                });
             });
         </script>
 
@@ -39,7 +37,7 @@
             <br>
             <textarea id="commentInput" rows="15" cols="30" placeholder="Hello, <3" autocomplete="off"></textarea>
             <br>
-            <button class="button" type="button" onclick="setLocalStorage()">Submit</button>
+            <button class="button" type="Submit">Submit</button>
         </div>
 
         <img class="imgHover" src="discord.png" alt="Discord Logo Picture" onclick="window.open('https://www.discord.gg/98JurbJ', '_blank')" style="position: absolute; right: 0px; bottom: 0px; height: 8%">

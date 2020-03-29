@@ -46,19 +46,3 @@ function clearFields () {
     document.getElementById("commentInput").innerHTML = '';
 }
 
-function setLocalStorage () {
-    var comments = document.getElementById("commentInput").innerHTML;
-
-    var inc = makeid(20);
-
-    if (comments) {
-        obj = localStorage.setItem(inc, comments);
-
-        alert("Thank you for the input!! <3");
-        clearFields();
-        return;
-    }else {
-        alert("You have to add stuff to your fields!");
-        return;
-    }
-}

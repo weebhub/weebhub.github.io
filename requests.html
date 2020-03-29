@@ -53,10 +53,6 @@
 
                     var response1 = await fetch("/file.json", {
                         method: 'POST',
-                        headers: {
-                            'Accept': '/file.json',
-                            'Content-Type': '/file.json'
-                        },
                         body: JSON.stringify(data)
                     });
                 }

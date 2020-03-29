@@ -45,4 +45,3 @@ function clearFields () {
     document.getElementById("nameInput").innerHTML = '';
     document.getElementById("commentInput").innerHTML = '';
 }
-

@@ -38,7 +38,9 @@
 
         <script>
             $("#clickBtn").click(function() {
-                console.log("Working");
+                $.getJSON("/file.json", function(data){
+                    console.log(data);
+                });
             });
         </script>
         <script src="indexJS.js"></script>

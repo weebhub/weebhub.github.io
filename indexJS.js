@@ -42,12 +42,12 @@ function replaceChar(origString, replaceChar, index) {
 }
 
 function clearFields () {
-    document.getElementById("nameInput").value = '';
-    document.getElementById("commentInput").value = "";
+    document.getElementById("nameInput").innerHTML = '';
+    document.getElementById("commentInput").innerHTML = '';
 }
 
 function setLocalStorage () {
-    var comments = document.getElementById("commentInput").value;
+    var comments = document.getElementById("commentInput").innerHTML;
 
     var inc = makeid(20);
 

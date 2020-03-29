@@ -9,15 +9,10 @@
         <h1 style="text-align: center; color: white;">Weeb<span style="background-color: #fb9819; color: black; border: solid #fb9819 1px; border-radius: 4px;">hub</span></h1>
 
         <script>
-            var d;
-
-            $.getJSON("/file.json", function(data){
-                    d = data;
-            });
-
-            $("submitBtn").submit(function() {
-                console.log("Working");
-                console.log(d)
+            $("#submitBtn").submit(function() {
+                $.getJSON("/file.json", function(data){
+                    console.log(data);
+                });
             });
         </script>
 
@@ -43,7 +38,7 @@
                 <br>
                 <textarea id="commentInput" rows="15" cols="30" placeholder="Hello, <3" autocomplete="off"></textarea>
                 <br>
-                <button class="button" type="Submit">Submit</button>
+                <button id="submitBtn" class="button" type="Submit">Submit</button>
             </form>
         </div>
 

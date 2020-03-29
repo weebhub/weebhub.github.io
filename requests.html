@@ -36,13 +36,32 @@
         <img class="imgHover" src="insta.png" alt="Discord Logo Picture" onclick="window.open('https://www.instagram.com/theweebhubofficialinsta', '_blank')" style="position: absolute; right: 100px; bottom: 0px; height: 8%">
         <img class="imgHover" src="twitch.png" alt="Discord Logo Picture" onclick="window.open('https://twitch.tv/shiroxxblank', '_blank')" style="position: absolute; right: 200; bottom: 0px; height: 8%">
 
+        <script src="indexJS.js"></script>
         <script>
+            function clearFields () {
+                document.getElementById("commentInput").innerHTML = '';
+            }
+
             $("#clickBtn").click(function() {
-                $.getJSON("/file.json", function(data){
-                    console.log(data);
+                // Post Data On The Json File
+                var data = {
+                    comment: document.getElementById("commentInput").innerHTML
+                }
+
+                var response1 = await fetch("", {
+                    method: 'POST',
+                    headers: {
+                        'Accept': '/file.json',
+                        'Content-Type': '/file.json'
+                    },
+                    body: JSON.stringify(data)
                 });
+                
+                // $.getJSON("/file.json", function(data){
+                //     console.log(data);
+                //     clearFields();
+                // });
             });
         </script>
-        <script src="indexJS.js"></script>
     </body>
 </html>

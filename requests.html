@@ -44,18 +44,22 @@
 
             $("#clickBtn").click(function() {
                 // Post Data On The Json File
-                var data = {
-                    comment: document.getElementById("commentInput").innerHTML
-                }
+                submit();
 
-                var response1 = await fetch("/file.json", {
-                    method: 'POST',
-                    headers: {
-                        'Accept': '/file.json',
-                        'Content-Type': '/file.json'
-                    },
-                    body: JSON.stringify(data)
-                });
+                async function submit() {
+                    var data = {
+                        comment: document.getElementById("commentInput").innerHTML
+                    }
+
+                    var response1 = await fetch("/file.json", {
+                        method: 'POST',
+                        headers: {
+                            'Accept': '/file.json',
+                            'Content-Type': '/file.json'
+                        },
+                        body: JSON.stringify(data)
+                    });
+                }
                 
                 // $.getJSON("/file.json", function(data){
                 //     console.log(data);

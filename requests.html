@@ -44,7 +44,6 @@
 
             $("#clickBtn").click(function() {
                 // Post Data On The Json File
-                submit();
 
                 async function submit() {
                     var data = {
@@ -59,6 +58,8 @@
                         },
                         body: JSON.stringify(data)
                     });
+
+                    submit();
                 }
                 
                 // $.getJSON("/file.json", function(data){

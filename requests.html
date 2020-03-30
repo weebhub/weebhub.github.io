@@ -50,7 +50,9 @@
                         comment: document.getElementById("commentInput").innerHTML
                     }
 
-                    var response1 = await fetch("/file.json", {
+                    console.log(data);
+
+                    var response1 = await fetch("file.json", {
                         method: 'POST',
                         headers: {
                             'Accept': 'application/json',

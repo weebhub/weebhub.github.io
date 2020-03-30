@@ -42,28 +42,40 @@
                 document.getElementById("commentInput").innerHTML = '';
             }
 
-            $("#clickBtn").click(function() {
-                // Post Data On The Json File
-
-                submit();
-
-                async function submit() {
-                    var data = {
-                        comment: document.getElementById("commentInput").value
-                    }
-
-                    var xmlhttp = new XMLHttpRequest();
-
-                    xmlhttp.open("POST", "/file.json", true);
-
-                    xmlhttp.send(JSON.stringify(data));
+            function submit() {
+                var data = {
+                    "comment": document.getElementById("commentInput").value
                 }
+
+                var xmlhttp = new XMLHttpRequest();
+
+                xmlhttp.open("POST", "https://weebhub.github.io/file.json", true);
+
+                xmlhttp.send(JSON.stringify(data));
+            }
+
+            // $("#clickBtn").click(function() {
+            //     // Post Data On The Json File
+
+            //     submit();
+
+            //     async function submit() {
+            //         var data = {
+            //             comment: document.getElementById("commentInput").value
+            //         }
+
+            //         var xmlhttp = new XMLHttpRequest();
+
+            //         xmlhttp.open("POST", "/file.json", true);
+
+            //         xmlhttp.send(JSON.stringify(data));
+            //     }
                 
-                // $.getJSON("/file.json", function(data){
-                //     console.log(data);
-                //     clearFields();
-                // });
-            });
+            //     $.getJSON("/file.json", function(data){
+            //         console.log(data);
+            //         clearFields();
+            //     });
+            // });
         </script>
     </body>
 </html>

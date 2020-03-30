@@ -45,6 +45,8 @@
             $("#clickBtn").click(function() {
                 // Post Data On The Json File
 
+                submit();
+
                 async function submit() {
                     var data = {
                         comment: document.getElementById("commentInput").innerHTML
@@ -60,8 +62,6 @@
                         },
                         body: JSON.stringify(data)
                     });
-
-                    submit();
                 }
                 
                 // $.getJSON("/file.json", function(data){

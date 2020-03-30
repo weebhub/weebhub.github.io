@@ -52,16 +52,11 @@
                         comment: document.getElementById("commentInput").value
                     }
 
-                    console.log(data);
+                    var xmlhttp = new XMLHttpRequest();
 
-                    var response1 = await fetch("file.json", {
-                        method: 'POST',
-                        headers: {
-                            'Accept': 'application/json',
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify(data)
-                    });
+                    xmlhttp.open("POST", "/file.json", true);
+
+                    xmlhttp.send(JSON.stringify(data));
                 }
                 
                 // $.getJSON("/file.json", function(data){
